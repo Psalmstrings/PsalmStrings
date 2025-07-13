@@ -1,6 +1,5 @@
 import React from 'react'
-import HeroBanner from '../component/herobanner'
-import MovieRow from '../component/MovieRow'
+import Herobanner from '../component/herobanner'
 import Navbar from '../component/Navbar'
 import Footer from '../component/Footer'
 import MovieCard from '../component/MovieCard'
@@ -9,7 +8,7 @@ function Homepage() {
   return (
     <div>
         <Navbar />
-        <HeroBanner />
+        <Herobanner />
           <MovieCard />
         <Footer />
 
