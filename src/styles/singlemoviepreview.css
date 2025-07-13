@@ -1,0 +1,122 @@
+.movie-page-containerr {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #fff;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: rgb(252, 210, 24);
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.back-button:hover {
+  background-color: rgba(252, 210, 24, 0.1);
+}
+
+.movie-content {
+  display: flex;
+  gap: 3rem;
+}
+
+.movie-poster-container {
+  flex: 1;
+}
+
+.movie-poster {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.movie-details {
+  flex: 2;
+ 
+}
+
+.movie-title {
+  font-size: 2.5rem;
+  margin-top: 0;
+  color: rgb(252, 210, 24);
+}
+
+.movie-meta {
+  display: flex;
+  gap: 1.5rem;
+  margin: 1rem 0 2rem;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.movie-meta span {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.rating {
+  color: rgb(252, 210, 24);
+}
+
+.movie-description {
+  margin-bottom: 3rem;
+  color: white;
+  font-size: 18px;
+  height: 20%;
+  /* line-height: 1.7; */
+}
+
+.movie-description h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: rgb(252, 210, 24);
+}
+
+.reviews-section {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+   margin-bottom: 150px;
+}
+
+.reviews-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: rgb(252, 210, 24);
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+.error {
+  color: #ff6b6b;
+}
+
+@media (max-width: 768px) {
+  .movie-content {
+    flex-direction: column;
+  }
+  
+  .movie-poster {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .movie-title {
+    font-size: 2rem;
+  }
+  
+  .movie-meta {
+    flex-wrap: wrap;
+  }
+}

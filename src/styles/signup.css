@@ -1,0 +1,143 @@
+/* Container */
+* {  
+  margin: 0;  
+  padding: 0;  
+  box-sizing: border-box;  
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;  
+} 
+
+body{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px;
+  /* width: 600px; */
+}
+
+/* Signup box */
+.signup-box {
+  background:  rgba(0, 0, 0, 0.692);
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.signup-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color:rgb(252, 210, 24);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Error message */
+.error-message {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+/* Form styling */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(252, 210, 24);
+}
+
+.form-group input {
+  padding: 0.75rem;
+  border: 1px solid #3d3d3d;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  width: 100%;
+  color: white
+}
+
+.form-group input::placeholder {
+  color: #ffffff;
+}
+
+.form-group select {
+  padding: 0.75rem;
+  border: 1px solid #3d3d3d;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  width: 100%;
+  color: white;
+  background-color: #3d3d3d ;
+}
+
+.form-group input:focus select:focus {
+  outline: none;
+  border-color:  rgb(252, 210, 24);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+/* Signup button */
+.signup-button {
+  background-color: rgb(252, 210, 24);
+  color: black;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 0.5rem;
+  font-size: 18px;
+}
+
+.signup-button:hover {
+  background-color: rgb(129, 107, 10);
+  color: white;
+}
+
+/* Login link */
+.login-link {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 1rem;
+}
+
+.login-link a {
+  color: rgb(252, 210, 24);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .signup-box {
+    padding: 1.5rem;
+  }
+  .signup-container {
+  padding: 20px;
+  
+}
+}

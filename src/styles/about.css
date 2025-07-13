@@ -1,0 +1,43 @@
+/* Base Styles */  
+.about-container {  
+  max-width: 1200px;  
+  margin: 0 auto;  
+  padding: 2rem;  
+  color: White;  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+}  
+
+.highlight {  
+  color:  rgb(252, 210, 24);  
+}  
+
+/* Header */  
+.about-header {  
+  text-align: center;  
+  margin-bottom: 3rem;  
+}  
+
+.about-header h1 {  
+  font-size: 2.5rem;  
+  margin-bottom: 0.5rem;  
+}  
+
+.subtitle {  
+  font-size: 1.2rem;  
+  color: white;  
+}  
+
+/* Content Cards */  
+.about-content {  
+  display: grid;  
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
+  gap: 2rem;  
+}  
+
+.about-card {  
+  background: white;  
+  border-radius: 8px;  
+  padding: 1.5rem;  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+  transition: transform 0.3s ease;
+}

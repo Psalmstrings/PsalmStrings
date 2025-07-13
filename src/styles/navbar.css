@@ -1,0 +1,161 @@
+* {  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;  
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background-color: rgba(0, 0, 0, 0.692);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  color: rgb(252, 210, 24);
+  
+}
+
+.searchbox{
+    padding: 2px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 12px;
+  width: 200px;
+}
+
+/* Logo Styling */
+.navbar h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: rgb(252, 210, 24);
+  margin: 0;
+  font-family: 'Georgia', serif;
+  text-decoration: none;
+}
+
+/* Navigation Links Container */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  text-decoration: none;
+}
+
+/* Individual Link Styling */
+.nav-links a {
+  text-decoration: none;
+  color: rgb(252, 210, 24);
+  font-weight: 600;
+  font-size: 16px;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Link Hover Effects */
+.nav-links a:hover {
+  color: rgb(245, 201, 6);
+}
+
+/* Active Link Indicator */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(252, 210, 24);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.signin-button,
+.signup-button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  background-color: rgb(252, 210, 24);
+  color: black;
+  transition: all 0.3s ease;
+   font-size: 16px; 
+   margin-left: 9px;
+}
+
+.signin-button:hover,
+.signup-button:hover {
+  background-color: rgb(235, 195, 15);
+}
+
+.auth-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-btn {
+  text-decoration: none;
+  color: black;
+  background-color: rgb(252, 210, 24);
+  font-weight: 600;
+  font-size: 16px;
+  padding: 9px;
+}
+
+.logout-button {
+  padding: 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  
+  transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: flex;
+    padding: 1rem;
+    gap: 20px;
+  }
+  .navbar h2 {
+  font-size: 1.0rem;
+  font-weight: 700;
+  color: rgb(252, 210, 24);
+  margin: 0;
+  font-family: 'Georgia', serif;
+}
+  
+  .nav-links {
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 10px;
+  }
+  
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+}

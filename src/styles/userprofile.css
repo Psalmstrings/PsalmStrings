@@ -1,0 +1,117 @@
+.user-profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color:rgb(252, 210, 24);
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  text-decoration: underline;
+}
+
+.user-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.user-header h1 {
+  font-size: 2.5rem;
+  color: rgb(252, 210, 24);
+}
+
+.user-header p {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.favorite-movies h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: rgb(252, 210, 24);
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 10px;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.movie-card {
+   width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  background: white;
+  /* margin: 10px; */
+  position: relative;
+  background-color: rgba(36, 36, 36, 0.74);
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.movie-poster {
+  position: relative;
+}
+
+.movie-poster img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-info {
+  padding: 20px;
+  width: 100%;
+  color: white;
+  
+}
+
+.movie-info h3 {
+  margin: 0 0 10px;
+  font-size: 1.6rem;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* .movie-info p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+} */
+
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 50px;
+}
+
+.error {
+  color: #e74c3c;
+  text-align: center;
+  margin-top: 50px;
+}
+.remove-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
