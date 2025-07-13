@@ -19,7 +19,7 @@ const UserProfile = () => {
         setLoading(true);
         setError('');
         
-        const userResponse = await axios.get(`${API_URL}/${userId}`);
+        const userResponse = await axios.get(`${API_URL}/users/${userId}`);
         setUser(userResponse.data);
 
         const moviesResponse = await axios.get(`${API_URL}/${userId}/favorites`);
