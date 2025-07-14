@@ -17,7 +17,7 @@ const SingleMoviePage = () => {
   useEffect(() => {
     const fetchMovie = async () => {
       try {
-        const response = await axios.get(`${API_URL}/movies/${id}`);
+        const response = await axios.get(`${API_URL}/movie/${id}`);
         setMovie(response.data);
       } catch (err) {
         setError('Failed to load movie details');

@@ -7,16 +7,17 @@
   
 }
 .movies-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   flex-wrap: wrap;
   /* justify-content: center; */
   /* padding: 10px; */
   gap: 25px;
-  /* width: 100%; */
+  width: 100%;
   
 }
 .movie-card {
-  width: 305px;
+  width: 330px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -156,8 +157,8 @@
 
 @media (max-width: 600px) {
   .movie-card {
-    width: 100%;
-    max-width: 350px;
+    width: 350px;
+    max-width: 380px;
     /* margin: 20px auto; */
   }
   .movies-container {
