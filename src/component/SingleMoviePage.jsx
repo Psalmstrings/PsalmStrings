@@ -12,10 +12,12 @@ const SingleMoviePage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
+  const API_URL = import.meta.env.VITE_API_URL
+
   useEffect(() => {
     const fetchMovie = async () => {
       try {
-        const response = await axios.get(`http://localhost:4008/api/movie/${id}`);
+        const response = await axios.get(`${API_URL}/movies/${id}`);
         setMovie(response.data);
       } catch (err) {
         setError('Failed to load movie details');
