@@ -15,8 +15,6 @@ const Navbar = () => {
 
   const userId = JSON.parse(localStorage.getItem("user"))|| null;
 
-  
-
   const handleLogout = async () => {
     try {
       await contextLogout();

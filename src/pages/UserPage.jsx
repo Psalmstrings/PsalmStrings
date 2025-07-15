@@ -22,9 +22,11 @@ const UserProfile = () => {
         const userResponse = await axios.get(`${API_URL}/user/${userId}`);
         setUser(userResponse.data);
 
-        const moviesResponse = await axios.get(`${API_URL}/${userId}/favorites`);
+        const moviesResponse = await axios.get(`${API_URL}/user/${userId}/favorites`);
         setFavoriteMovies(moviesResponse.data.favorites || []);
 
+        console.log('User Data:', userResponse.data);
+        console.log('Favorite Movies:', moviesResponse.data.favorites || []);
         console.log('Favorite Movies:', moviesResponse.data.favorites);
 
       } catch (err) {
@@ -44,13 +46,17 @@ const UserProfile = () => {
   };
 
   const handleRemoveFavorite = async (movieId) => {
+
+    const user = JSON.parse(localStorage.getItem("user"));
     try {
       // Confirm with user before removal
       if (!window.confirm('Are you sure you want to remove this movie from favorites?')) {
         return;
       }
       
-      await axios.delete(`${API_URL}/${userId}/favorites/${movieId}`);
+      await axios.delete(`${API_URL}/user/${user}/favorites/${movieId}`, {
+        headers: {'Content-Type': 'application/json' },
+      });
       
       // Update the UI by filtering out the removed movie
       setFavoriteMovies(prevMovies => prevMovies.filter(movie => movie._id !== movieId));
