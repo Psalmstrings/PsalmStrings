@@ -17,7 +17,7 @@ function AdminLogin() {
   }
 
   try {
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/admin/login`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/admin/adminlogin`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -38,8 +38,9 @@ function AdminLogin() {
 
     // Handle successful login (e.g., store token and redirect)
     console.log("Login successful:", data);
-    localStorage.setItem("token", data.accessToken); // Store the JWT token
-    alert("Login successful...");
+    localStorage.setItem("token", data.accessToken);
+    localStorage.setItem("user", JSON.stringify(data.user));
+    alert("Login successful. Welcome to Admin Dashboard");
     window.location.href = "/adminpage"; // Redirect to home or dashboard
   } catch (err) {
     setError(err.message || "An error occurred during login.");
@@ -49,7 +50,7 @@ function AdminLogin() {
   return (
     <div className="login-container">
       <div className="login-box">
-        <h2 className="login-title">Sign in to your account</h2>
+        <h2 className="login-title">Sign in: Admin Only</h2>
 
         {error && <div className="error-message">{error}</div>}
 

@@ -24,7 +24,7 @@ function AdminSignup() {
   }
 
   try {
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/admin/signup`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/admin/adminsignup`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
