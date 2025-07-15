@@ -77,14 +77,27 @@
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);  
 }  
 
-/* Action Buttons */  
+/* Action Buttons */ 
+
+.hero-actions{
+  display: flex;
+}
 .hero-actions input {  
   width: 90%;
   padding: 1.2rem; 
   border-radius: 10px;
-  color:  rgb(252, 210, 24);
-  font-size: 14px;
-}  
+  color:  black;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.hero-actions button{
+  background-color: rgb(252, 210, 24);
+  color: black;
+  padding: 1.2rem;
+  border-radius: 10px;
+  font-size: 16px;
+}
 
 .hero-button {  
   padding: 0.8rem 2rem;  
@@ -113,6 +126,73 @@
 
 .info-button:hover {  
   background-color: rgba(109, 109, 110, 0.9);  
-}  
+} 
 
+/* Search Popup Styles */
+.search-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.search-popup {
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+  width: 40%;
+  max-width: 800px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  color: white;
+  
+}
+
+.close-popup {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+.movie-resultt{
+  display: block;
+  align-content: center;
+  align-items: center;
+}
+
+.movie-resultt img{
+  /* height: 200px; */
+  width: 70%;
+}
+
+.error-message{
+  color: red;
+  background-color: #1a1a1a;
+}
+
+.no-results {
+  text-align: center;
+  padding: 40px 0;
+  color: #cccccc;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.search-popup {
+  animation: fadeIn 0.3s ease-out;
+}
 
