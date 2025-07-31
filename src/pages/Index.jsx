@@ -32,14 +32,14 @@ const Home = () => {
         </div>
         <div className="testimonial-card">
           <p>Are you a content Creator?? </p>
-          <div className="auth-buttons">
+          {/* <div className="auth-buttons">
             <Link to="/adminsignup" className="cta-button">
               Sign Up
             </Link>
             <Link to="/adminlogin" className="cta-button">
               Sign In
             </Link>
-          </div>
+          </div> */}
         </div>
       </section>
       <Footer />
